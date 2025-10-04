@@ -12,6 +12,7 @@ const solanaConnection = new Connection(RPC_ENDPOINT, {
   wsEndpoint: RPC_WEBSOCKET_ENDPOINT,
 })
 
+
 export async function bundle(txs: VersionedTransaction[], keypair: Keypair) {
   try {
     const txNum = Math.ceil(txs.length / 3)
@@ -33,6 +34,7 @@ export async function bundle(txs: VersionedTransaction[], keypair: Keypair) {
   }
 }
 
+
 export async function bull_dozer(txs: VersionedTransaction[], keypair: Keypair) {
   try {
     const bundleTransactionLimit = parseInt('4')
@@ -51,7 +53,6 @@ export async function bull_dozer(txs: VersionedTransaction[], keypair: Keypair) 
     return 0
   }
 }
-
 
 async function build_bundle(
   search: SearcherClient,
