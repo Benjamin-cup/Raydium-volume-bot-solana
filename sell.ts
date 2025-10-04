@@ -5,6 +5,7 @@ import {
   getAssociatedTokenAddress,
   transfer,
 } from '@solana/spl-token'
+
 import {
   Keypair,
   Connection,
@@ -17,6 +18,7 @@ import {
   ComputeBudgetProgram,
   Transaction
 } from '@solana/web3.js'
+
 import {
   ADDITIONAL_FEE,
   BUY_AMOUNT,
@@ -35,6 +37,7 @@ import {
   SELL_ALL_BY_TIMES,
   SELL_PERCENT
 } from './constants'
+
 import { Data, editJson, readJson, saveDataToFile, sleep } from './utils'
 import base58 from 'bs58'
 import { getBuyTx, getBuyTxWithJupiter, getSellTx, getSellTxWithJupiter } from './utils/swapOnlyAmm'
